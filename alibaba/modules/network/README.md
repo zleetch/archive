@@ -1,6 +1,8 @@
 # Network Module
 this module has VPC, Vswitch, and NAT Gateway
 
+## Parameter
+
 | Parameter | Type | Required | Default |
 | :---: | :---: | :---: | :---: |
 | vpc_name | string | yes | - |
@@ -16,3 +18,14 @@ this module has VPC, Vswitch, and NAT Gateway
 | nat_type | string | no | Enhanced | 
 | tag  | object | yes | - |
 | tag.team | string | yes | - |
+
+## Output
+
+| Output | type |
+| :---: | :---: |
+| vpc_id | string |
+| vpc_cidr | string |
+| vsw_id | list |
+| natgw_id | string |
+| natgw_ip | string |
+| natgw_snat | string |
