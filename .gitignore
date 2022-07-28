@@ -38,3 +38,5 @@ terraform.rc
 
 #Key pair
 *pem
+
+*.terraform
