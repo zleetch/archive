@@ -15,6 +15,7 @@ this module has VPC, Vswitch, and NAT Gateway
 | nat_name | string | no | null |
 | nat_vsw | string | no | null |
 | nat_payment | string | no | PayAsYouGo |
+| nat_zone | string | no | a |
 | nat_type | string | no | Enhanced | 
 | tag  | object | yes | - |
 | tag.team | string | yes | - |
