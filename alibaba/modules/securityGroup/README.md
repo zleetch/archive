@@ -1,5 +1,5 @@
-# Keypair Module
-this module has keypair
+# Security Group Module
+this module has security group
 
 ## Parameter
 
