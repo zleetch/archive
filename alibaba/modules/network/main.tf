@@ -7,7 +7,7 @@ locals {
   create_nat = var.nat_name != null ? true : false
   nat_name   = var.nat_name != null ? "nat-${var.nat_name}-${local.env}-gw" : null
   eip_name   = var.nat_name != null ? "eip-${var.nat_name}-${local.env}-natgw" : null
-  tags       = merge({ Env = local.env }, var.tag)
+  tags       = merge({ Env = local.env, Runby = "terraform" }, var.tag)
 }
 
 data "alicloud_vswitches" "natgw" {

@@ -45,7 +45,6 @@ variable "nat_type" {
 
 variable "tag" {
   type = object({
-    Team  = string
-    Runby = string
+    Team = string
   })
 }
