@@ -18,12 +18,12 @@ variable "ecs_mem" {
 }
 
 variable "image_name" {
-  type = string
+  type    = string
   default = "ubuntu"
 }
 
 variable "image_version" {
-  type = string
+  type    = string
   default = "22"
 }
 
