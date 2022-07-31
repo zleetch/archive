@@ -6,7 +6,7 @@ locals {
 
 resource "alicloud_ecs_key_pair" "key_pair" {
   key_pair_name = local.key_name
-  key_file      = "${abspath(path.root)}/config/keypair/${local.key_name}"
+  key_file      = "${abspath(path.root)}/config/keypair/${local.env}/${local.key_name}.pem"
   tags          = merge({ Name = local.key_name }, local.tags)
 }
 

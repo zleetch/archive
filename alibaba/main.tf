@@ -62,13 +62,13 @@ module "test-ecs" {
   source        = "./modules/ecs"
   region        = var.region
   ecs_name      = "test"
-  replica       = 2
   image_name    = "ubuntu"
   image_version = "18"
   vsw_name      = "test"
-  zone          = ["a", "b"]
+  zone          = ["a"]
   keypair       = module.test-key.key_id
   sg_id         = [module.test-sg.secgroup_id]
+  attach_eip    = true
   tag = {
     Team = "devops"
   }
