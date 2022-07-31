@@ -57,3 +57,24 @@ module "test-sg" {
     Team = "devops"
   }
 }
+
+module "test-ecs" {
+  source        = "./modules/ecs"
+  region        = var.region
+  ecs_name      = "test"
+  replica       = 2
+  image_name    = "ubuntu"
+  image_version = "18"
+  vsw_name      = "test"
+  zone          = ["a", "b"]
+  keypair       = module.test-key.key_id
+  sg_id         = [module.test-sg.secgroup_id]
+  tag = {
+    Team = "devops"
+  }
+  depends_on = [
+    module.test-vpc,
+    module.test-key,
+    module.test-sg
+  ]
+}
