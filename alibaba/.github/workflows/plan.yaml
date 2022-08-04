@@ -1,0 +1,17 @@
+---
+name: "Terraform Github Action"
+
+on:
+  pull_request:
+  
+
+jobs:
+  
+# Let's break down this diagram, starting from the left and going right:
+
+# Event: This is the event that triggers the action. It represents an activity in the repository that will trigger a workflow run.
+# Workflow: This is the workflow that is run when the event occurs.
+# Job: A set of steps that are run in sequence to accomplish a task. Each job runs on its own runner.
+# Step: A step is either a shell script, or an action that will be run on the runner assigned for the job the step is part of.
+# Runner: A runner is a virtual machine (or any computer with a supported operating system) that runs the steps in a job.
+# This is very well explained in GitHub's extensive docs, and you can read more about the components here.
